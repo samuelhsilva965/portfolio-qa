@@ -569,6 +569,7 @@ img {
     .hero-image img {
         width: 200px;
         height: 200px;
+        margin-top: 1.5rem;
     }
 
     .sobre-grid {
