@@ -156,7 +156,7 @@
     <!-- Projeto em Destaque -->
     <section id="projeto" class="section projeto-destaque">
         <div class="container">
-            <h2 class="section-title">Projeto em Destaque</h2>
+            <h2 class="section-title">Projetos em Destaque</h2>
             <div class="projeto-card">
                 <div class="projeto-info">
                     <h3>contacts-android-automation</h3>
@@ -183,10 +183,75 @@
                         <div class="browser-frame-bar">
                             <span></span><span></span><span></span>
                         </div>
-                        <img src="assets/Captura de tela 2026-07-15 141137.png" alt="Dashboard Allure com resultados dos testes" loading="lazy">
+                        <div class="terminal-output">
+                            <p class="term-file">Funcionalidades por história &middot; <span class="term-filename">total de itens 4</span></p>
+
+                            <div class="term-suite">
+                                <div class="term-test"><span class="term-pass">✓</span><span>Criação de Contato <span class="term-count">— 15 cenários</span></span></div>
+                                <div class="term-test"><span class="term-pass">✓</span><span>Delete Contact <span class="term-count">— 9 cenários</span></span></div>
+                                <div class="term-test"><span class="term-pass">✓</span><span>Atualizar Contato <span class="term-count">— 8 cenários</span></span></div>
+                                <div class="term-test"><span class="term-pass">✓</span><span>Home Empty <span class="term-count">— 1 cenário</span></span></div>
+                            </div>
+
+                            <p class="term-summary">33 passed &middot; Appium ✓ &middot; Allure ✓</p>
+                        </div>
                     </div>
-                    <p class="projeto-midia-caption">Relatório Allure — 33 cenários automatizados, 100% de sucesso</p>
+                    <p class="projeto-midia-caption">Saída real da suíte — 33 cenários, 100% de sucesso</p>
                 </div>
+            </div>
+            <div class="projeto-card">
+                <div class="projeto-info">
+                    <h3>sauce-labs-automation</h3>
+                    <p class="projeto-tags">
+                    <span class="badge badge-gold">Cypress</span>
+                    <span class="badge badge-gold">JavaScript</span>
+                    <span class="badge badge-gold">Page Object Model</span>
+                    <span class="badge badge-gold">GitHub Actions</span>
+                    <span class="badge badge-gold">Mochawesome</span>
+                    <span class="badge badge-gold">ESLint/Prettier</span>
+                    </p>
+                    <p><strong>Objetivo:</strong> Suíte de testes E2E para o SauceDemo, com foco em arquitetura de testes escalável e boas práticas de engenharia, não apenas cobertura de caminho feliz.</p>
+                    <p><strong>Stack utilizada:</strong> Cypress + JavaScript + ESLint/Prettier + GitHub Actions + Mochawesome Reporter.</p>
+                    <p><strong>Arquitetura:</strong> Page Object Model com separação entre seletores (<code>elements/</code>) e ações (<code>pages/</code>), custom commands para fluxos repetidos, fixtures para massa de dados e zero <code>cy.wait</code> fixo, toda espera resolvida via retry-ability nativa do Cypress.</p>
+                    <p><strong>Cobertura:</strong> login (sucesso, usuário bloqueado, credenciais inválidas), fluxo de compra completo E2E, ordenação de produtos com assert de lógica (não só visual) e responsividade mobile.</p>
+                    <p><strong>CI/CD:</strong> pipeline no GitHub Actions com lint/format como gate, execução em matriz Chrome + Firefox em paralelo, retries controlados (só em CI, valor baixo pra não mascarar flakiness) e relatório Mochawesome publicado como artefato.</p>
+                    <div class="projeto-links">
+                    <a href="https://github.com/samuelhsilva965/sauce-labs-automation" target="_blank" class="btn btn-primary"><i class="fab fa-github"></i> Ver código no GitHub</a>
+                    <a href="https://samuelhsilva965.github.io/sauce-labs-automation/" target="_blank" class="btn btn-outline"><i class="fas fa-check-circle"></i> Ver relatório Mochawesome</a>
+                    </div>
+                </div>
+                <div class="projeto-midia">
+                    <div class="browser-frame">
+                        <div class="browser-frame-bar">
+                        <span></span><span></span><span></span>
+                        </div>
+                        <div class="terminal-output">
+                        <p class="term-file">Running: <span class="term-filename">login.cy.js</span></p>
+                        <div class="term-suite">
+                            <p class="term-describe">Login</p>
+                            <div class="term-test"><span class="term-pass">✓</span><span>Login com sucesso (usuário válido)</span></div>
+                            <div class="term-test"><span class="term-pass">✓</span><span>Exibe erro para usuário bloqueado</span></div>
+                            <div class="term-test"><span class="term-pass">✓</span><span>Exibe erro para usuário inválido</span></div>
+                        </div>
+                        <div class="term-suite">
+                            <p class="term-describe">Login - mobile</p>
+                            <div class="term-test"><span class="term-pass">✓</span><span>Realiza login com sucesso (viewport mobile)</span></div>
+                        </div>
+
+                        <p class="term-file">Running: <span class="term-filename">compra_completa.cy.js</span></p>
+                        <div class="term-suite">
+                            <div class="term-test"><span class="term-pass">✓</span><span>Compra completa com sucesso</span></div>
+                        </div>
+
+                        <p class="term-file">Running: <span class="term-filename">ordena_produtos.cy.js</span></p>
+                        <div class="term-suite">
+                            <div class="term-test"><span class="term-pass">✓</span><span>Ordena produtos: menor para maior</span></div>
+                        </div>
+
+                        <p class="term-summary">6 passing &middot; Chrome ✓ &middot; Firefox ✓</p>
+                    </div>
+                </div>
+                <p class="projeto-midia-caption">Saída real da suíte — 6 cenários, 2 navegadores, 100% de sucesso</p>
             </div>
         </div>
     </section>

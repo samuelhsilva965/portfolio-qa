@@ -357,12 +357,15 @@ img {
 /* ========== PROJETO DESTAQUE ========== */
 .projeto-card {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.15fr 0.85fr;
     gap: 2rem;
     background: var(--bg-card);
     padding: 2rem;
     border-radius: 12px;
     border: 1px solid var(--border-color);
+}
+.projeto-card + .projeto-card {
+  margin-top: 2rem;
 }
 
 .projeto-info h3 {
@@ -384,10 +387,15 @@ img {
 }
 
 .projeto-links {
-    margin-top: 1.5rem;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.projeto-links .btn {
+  width: auto;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
 }
 
 .projeto-midia {
@@ -522,6 +530,68 @@ img {
 }
 .footer-copy .gold {
     color: var(--accent);
+}
+
+/* ========== TERMINAL OUTPUT (cards de projeto) ========== */
+.terminal-output {
+  background: var(--bg-primary);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  padding: 1.25rem 1.5rem;
+  margin: 0;
+  color: var(--text-secondary);
+  overflow-x: auto;
+}
+
+.term-file {
+  margin: 1rem 0 0.35rem;
+  opacity: 0.55;
+  white-space: nowrap;
+}
+.term-file:first-child {
+  margin-top: 0;
+}
+.term-filename {
+  color: var(--text-primary);
+  opacity: 1;
+}
+
+.term-suite {
+  margin-left: 1.25rem;
+}
+
+.term-describe {
+  margin: 0 0 0.35rem;
+  color: var(--text-primary);
+}
+
+.term-test {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0 0 0.35rem 1.25rem;
+}
+.term-test .term-pass {
+  flex-shrink: 0;
+  color: #4caf50;
+  font-weight: 700;
+}
+.term-test span:last-child {
+  flex: 1;
+}
+
+.term-summary {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--accent);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.term-count {
+  opacity: 0.55;
+  font-size: 0.8em;
 }
 
 /* ========== RESPONSIVO ========== */
